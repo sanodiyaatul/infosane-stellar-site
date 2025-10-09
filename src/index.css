@@ -66,12 +66,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-optical-sizing: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    @apply font-bold;
     color: hsl(var(--navy));
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
   }
 
   section {
@@ -106,5 +110,107 @@ All colors MUST be HSL.
 
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.7s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+
+  .stagger-5 {
+    animation-delay: 0.5s;
   }
 }
