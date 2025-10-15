@@ -1,9 +1,11 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo-full.png";
+import logo from "@/assets/image.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy text-navy-foreground py-12">
+    // <footer className="bg-navy text-navy-foreground py-12">
+    <footer className="bg-navy text-navy-foreground py-12 relative z-10 ">
+      {/* <section id="contact" className="py-24 bg-white min-h-screen relative z-10"></section> */}
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}

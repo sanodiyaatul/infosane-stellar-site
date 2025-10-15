@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Activity, BarChart3, Building2, Sun } from "lucide-react";
-import mobichikitsaImg from "@/assets/project-mobichikitsa.jpg";
-import clideImg from "@/assets/project-clide.jpg";
+import mobichikitsaImg from "@/assets/mobichikitsaImg.png";
+import clideImage from "@/assets/clideImage.png";
 import bankAuditImg from "@/assets/project-bank-audit.jpg";
 import solarImg from "@/assets/project-solar.jpg";
 
@@ -70,7 +70,7 @@ const Projects = () => {
         "Safety Measures: Strict adherence to data privacy, redundancy systems, continuous accuracy checks, ethical guidelines, and maintaining human oversight."
       ],
       icon: <BarChart3 className="h-6 w-6" />,
-      image: clideImg,
+      image: clideImage,
       color: "from-primary to-accent"
     },
     {
@@ -113,7 +113,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-secondary/30">
+    // <section id="projects" className="py-24 bg-secondary/30">
+    <section id="projects" className="py-20 bg-white min-h-screen relative z-10">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-navy">
